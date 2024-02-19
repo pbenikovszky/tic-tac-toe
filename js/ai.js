@@ -43,7 +43,6 @@ function findBestMove(board, currentPlayer, minimizingPlayer) {
             } else if (score > bestScore) {
                 bestScore = score;
                 moves = [i];
-                console.log(`New best ${i}`, moves);
             }
             board[i] = 0;
         }
