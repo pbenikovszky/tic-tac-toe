@@ -1,0 +1,42 @@
+.back-button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--orange);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 3rem;
+}
+
+#board {
+    width: calc(var(--cell-size) * 3);
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.cell {
+    user-select: none;
+    height: var(--cell-size);
+    width: var(--cell-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--orange);
+    font-size: var(--cell-size);
+    border-right: 2px solid var(--orange);
+    border-bottom: 2px solid var(--orange);
+}
+
+.cell:nth-child(3n) {
+    border-right: none;
+}
+
+.cell:nth-child(6) ~ .cell {
+    border-bottom: none;
+}
+
+.cell.winner {
+    color: red;
+}
